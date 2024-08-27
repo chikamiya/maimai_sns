@@ -1,16 +1,51 @@
 ---
+const userName = "まいまい";
 
+import '../styles/globalstyles.css';
+
+const bgColor = "linear-gradient(315deg, rgba(240,157,186,1) 0%, rgba(251,228,236,1) 100%);";
+const fontColor = "#333333";
+const accentColor700 = "#35DCA1";
+const MaruGo = "Zen Maru Gothic";
 ---
 
-<html lang="en">
+<style define:vars={{ bgColor, fontColor, accentColor700, MaruGo }}>
+	body {
+		font-family: var(--MaruGo), serif;
+		color: var(--fontColor);
+		background: var(--bgColor);
+		height: 100vh;
+	}
+</style>
+
+<html lang="ja">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;900&display=swap" rel="stylesheet">
+		<title>{userName}</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<img>
+		<h1>{userName}</h1>
+		<p>現役アイドルのまいまいです。ライバーもやってます。よろしくです。</p>
+		<dl>
+			<dt>誕生日：</dt>
+			<dd>5/30</dd>
+			<dt>血液型：</dt>
+			<dd>A</dd>
+			<dt>好きな動物：</dt>
+			<dd>ワンちゃん</dd>
+		</dl>
+		<ul>
+			<li><a href="https://www.instagram.com/inu_maimai/" target="_blank">Instagram</a></li>
+			<li><a href="https://www.bigo.tv/user/mai5307" target="_blank">BIGO LIVE</a></li>
+			<li><a href="https://www.tiktok.com/@myai_chan" target="_blank">TikTok</a></li>
+		</ul>
+		<p><small></small></p>
 	</body>
 </html>
