@@ -36,7 +36,89 @@ ol {
 }
 
 img {
-  display: block;
   max-inline-size: 100%;
   max-block-size: 100%;
+  vertical-align: bottom;
+}
+
+body > div {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  max-width: 450px;
+  padding: 48px 30px 16px;
+}
+
+p.prof_img {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+p.prof_img img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 1.35;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.55;
+  margin-bottom: 24px;
+}
+
+dl {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 56px;
+}
+
+dt {
+  width: 35%;
+  margin-bottom: 4px;
+}
+
+dd {
+  width: 65%;
+  margin-bottom: 4px;
+}
+
+ul:has(li.link_btn) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  margin-bottom: 60px;
+}
+
+ul li.link_btn {
+  width: 300px;
+}
+
+li.link_btn a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 1.45;
+  border-radius: 30px;
+  height: 56px;
+}
+
+p.small {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.75;
+  text-align: center;
 }
