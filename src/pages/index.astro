@@ -1,5 +1,6 @@
 ---
 const userName = "まいまい🐶🤍";
+const profImgAlt = userName + "のプロフィール画像";
 
 import { Image } from 'astro:assets'
 import profImage from "../assets/profile_img.jpg";
@@ -40,7 +41,7 @@ const MaruGo = "Zen Maru Gothic";
 	</head>
 	<body>
 		<div>
-			<p class="prof_img"><Image src={profImage} alt="まいまいのプロフィール画像" loading="eager" decoding="sync" /></p>
+			<p class="prof_img"><Image src={profImage} alt={profImgAlt} loading="eager" decoding="sync" /></p>
 			<h1>{userName}</h1>
 			<p>毎日楽しく配信してます🐕<br>20:00〜まいまい枠に集合ー！💐</p>
 			<dl>
