@@ -13,21 +13,7 @@ const accentColor700 = "#35DCA1";
 const MaruGo = "Zen Maru Gothic";
 ---
 
-<style define:vars={{ bgColor, fontColor, accentColor700, MaruGo }}>
-	body {
-		font-family: var(--MaruGo), serif;
-		color: var(--fontColor);
-		background: var(--bgColor);
-		height: 100%;
-	}
-
-	li.link_btn a {
-		background-color: var(--accentColor700);
-		color: #fff;
-	}
-</style>
-
-<html lang="ja">
+<html lang='ja'>
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x=%2250%%22 y=%2250%%22 style=%22dominant-baseline:central;text-anchor:middle;font-size:90px;%22>🐶</text></svg>" />
@@ -38,6 +24,19 @@ const MaruGo = "Zen Maru Gothic";
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link rel="preload" as="style" fetchpriority="high" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;900&display=swap" />
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;900&display=swap" media="print" onload='this.media="all"' />
+		<style define:vars={{ bgColor, fontColor, accentColor700, MaruGo }}>
+			body {
+				font-family: var(--MaruGo), serif;
+				color: var(--fontColor);
+				background: var(--bgColor);
+				height: 100%;
+			}
+		
+			li.link_btn a {
+				background-color: var(--accentColor700);
+				color: #fff;
+			}
+		</style>
 		<title>{userName}</title>
 	</head>
 	<body>
