@@ -1,6 +1,7 @@
 ---
 const userName = "まいまい🐶🤍";
 const profImgAlt = userName + "のプロフィール画像";
+const metaDes = userName + "のSNSまとめページ"
 
 import { Image } from 'astro:assets'
 import profImage from "../assets/profile_img.webp";
@@ -20,6 +21,7 @@ const MaruGo = "Zen Maru Gothic";
 		<link rel=”icon” href=“/favicon.ico”>
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content={metaDes} />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link rel="preload" as="style" fetchpriority="high" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;900&display=swap" />
