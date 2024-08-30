@@ -7,11 +7,13 @@ import { Image } from 'astro:assets'
 import profImage from "../assets/profile_img.webp";
 
 import '../styles/globalstyles.css';
+import '@fontsource/zen-maru-gothic/500.css';
+import '@fontsource/zen-maru-gothic/900.css';
 
 const bgColor = "linear-gradient(315deg, rgba(240,157,186,1) 0%, rgba(251,228,236,1) 100%);";
 const fontColor = "#333333";
 const accentColor700 = "#35DCA1";
-const MaruGo = "Zen Maru Gothic";
+const mainFont = "Zen Maru Gothic";
 ---
 
 <html lang='ja'>
@@ -22,13 +24,9 @@ const MaruGo = "Zen Maru Gothic";
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<meta name="description" content={metaDes} />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link rel="preload" as="style" fetchpriority="high" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;900&display=swap" />
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;900&display=swap" media="print" onload='this.media="all"' />
-		<style define:vars={{ bgColor, fontColor, accentColor700, MaruGo }}>
+		<style define:vars={{ bgColor, fontColor, accentColor700, mainFont }}>
 			body {
-				font-family: var(--MaruGo), serif;
+				font-family: var(--mainFont), serif;
 				color: var(--fontColor);
 				background: var(--bgColor);
 				height: 100%;
