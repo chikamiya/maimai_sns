@@ -1,0 +1,74 @@
+---
+const userName = "まいまい🐶🤍";
+const metaDes = userName + "のSNSまとめページ"
+
+import Footer from "../pages/footer.astro"
+import galleryImg1Src from '../assets/no_img.webp';
+
+const galleryImg1 = await getImage({src: galleryImg1Src, format: 'webp'});
+
+import '../styles/globalstyles.css';
+import '@fontsource/zen-maru-gothic/500.css';
+import '@fontsource/zen-maru-gothic/900.css';
+import { getImage } from "astro:assets";
+
+const bgColor = "linear-gradient(315deg, rgba(240,157,186,1) 0%, rgba(251,228,236,1) 100%);";
+const fontColor = "#333333";
+const mainFont = "Zen Maru Gothic";
+---
+
+<html lang='ja'>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x=%2250%%22 y=%2250%%22 style=%22dominant-baseline:central;text-anchor:middle;font-size:90px;%22>🐶</text></svg>" />
+		<link rel=”icon” href=“/favicon.ico”>
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content={metaDes} />
+		<style define:vars={{ bgColor, fontColor, mainFont, gallery1: `url(${galleryImg1.src})` }}>
+			body {
+				font-family: var(--mainFont), sans-serif;
+				color: var(--fontColor);
+				background: var(--bgColor);
+				height: 100%;
+			}
+            #gallery ul {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 24px;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 60px;
+            }
+
+            #gallery ul li {
+                width: calc((100% -  60px ) / 2);
+                aspect-ratio: 1 / 1;
+                background-image: var(--gallery1);
+                background-size: cover;
+            }
+		
+
+		</style>
+		<title>ギャラリー｜{userName}</title>
+	</head>
+	<body id="gallery">
+		<div>
+			<h1>ギャラリー</h1>
+			<p>過去にBIGO LIVEで配布したアイコンを公開！！</p>
+			<ul class="gallery">
+				<li></li>
+				<li></li>
+				<li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+			</ul>
+            <p><a href="/">←トップページへ戻る</a></p>
+			<Footer />
+		</div>
+	</body>
+</html>

@@ -5,6 +5,7 @@ const metaDes = userName + "のSNSまとめページ"
 
 import { Image } from 'astro:assets'
 import profImage from "../assets/profile_img.webp";
+import Footer from "../pages/footer.astro"
 
 import '../styles/globalstyles.css';
 import '@fontsource/zen-maru-gothic/500.css';
@@ -55,7 +56,7 @@ const mainFont = "Zen Maru Gothic";
 				<li class="link_btn"><a href="https://www.tiktok.com/@myai_chan" target="_blank">TikTok</a></li>
 				<li class="link_btn"><a href="https://www.instagram.com/inu_maimai/" target="_blank">Instagram</a></li>
 			</ul>
-			<p class="small">2024 {userName} All Rights Reserved.</p>
+			<Footer />
 		</div>
 	</body>
 </html>
