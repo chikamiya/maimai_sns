@@ -3,9 +3,21 @@ const userName = "まいまい🐶🤍";
 const metaDes = userName + "のSNSまとめページ"
 
 import Footer from "../pages/footer.astro"
-import galleryImg1Src from '../assets/no_img.webp';
+import galleryImg0Src from '../assets/comingSoon_img.webp';
+import galleryImg1Src from '../assets/gallery001.jpg';
+import galleryImg2Src from '../assets/gallery002.jpg';
+import galleryImg3Src from '../assets/gallery003.jpg';
+import galleryImg4Src from '../assets/gallery004.jpg';
+import galleryImg5Src from '../assets/gallery005.jpg';
+import galleryImg6Src from '../assets/gallery006.jpg';
 
+const galleryImg0 = await getImage({src: galleryImg0Src, format: 'webp'});
 const galleryImg1 = await getImage({src: galleryImg1Src, format: 'webp'});
+const galleryImg2 = await getImage({src: galleryImg2Src, format: 'webp'});
+const galleryImg3 = await getImage({src: galleryImg3Src, format: 'webp'});
+const galleryImg4 = await getImage({src: galleryImg4Src, format: 'webp'});
+const galleryImg5 = await getImage({src: galleryImg5Src, format: 'webp'});
+const galleryImg6 = await getImage({src: galleryImg6Src, format: 'webp'});
 
 import '../styles/globalstyles.css';
 import '@fontsource/zen-maru-gothic/500.css';
@@ -25,7 +37,17 @@ const mainFont = "Zen Maru Gothic";
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<meta name="description" content={metaDes} />
-		<style define:vars={{ bgColor, fontColor, mainFont, gallery1: `url(${galleryImg1.src})` }}>
+		<style define:vars={{ bgColor, 
+							  fontColor, 
+							  mainFont, 
+							  gallery0: `url(${galleryImg0.src})`,
+							  gallery1: `url(${galleryImg1.src})`,
+							  gallery2: `url(${galleryImg2.src})`,
+							  gallery3: `url(${galleryImg3.src})`,
+							  gallery4: `url(${galleryImg4.src})`,
+							  gallery5: `url(${galleryImg5.src})`,
+							  gallery6: `url(${galleryImg6.src})`,
+							}}>
 			body {
 				font-family: var(--mainFont), sans-serif;
 				color: var(--fontColor);
@@ -45,9 +67,30 @@ const mainFont = "Zen Maru Gothic";
             #gallery ul li {
                 width: calc((100% -  60px ) / 2);
                 aspect-ratio: 1 / 1;
-                background-image: var(--gallery1);
                 background-size: cover;
             }
+
+			#gallery ul li.gallery000 {
+				background-image: var(--gallery0);
+			}
+			#gallery ul li.gallery001 {
+				background-image: var(--gallery1);
+			}
+			#gallery ul li.gallery002 {
+				background-image: var(--gallery2);
+			}
+			#gallery ul li.gallery003 {
+				background-image: var(--gallery3);
+			}
+			#gallery ul li.gallery004 {
+				background-image: var(--gallery4);
+			}
+			#gallery ul li.gallery005 {
+				background-image: var(--gallery5);
+			}
+			#gallery ul li.gallery006 {
+				background-image: var(--gallery6);
+			}
 		
 
 		</style>
@@ -58,14 +101,14 @@ const mainFont = "Zen Maru Gothic";
 			<h1>ギャラリー</h1>
 			<p>過去にBIGO LIVEで配布したアイコンを公開！！</p>
 			<ul class="gallery">
-				<li></li>
-				<li></li>
-				<li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+				<li class="gallery000"></li>
+				<li class="gallery000"></li>
+				<li class="gallery006"></li>
+                <li class="gallery005"></li>
+                <li class="gallery004"></li>
+                <li class="gallery003"></li>
+                <li class="gallery002"></li>
+                <li class="gallery001"></li>
 			</ul>
             <p><a href="/">←トップページへ戻る</a></p>
 			<Footer />
