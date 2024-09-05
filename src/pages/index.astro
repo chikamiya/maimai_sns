@@ -33,9 +33,13 @@ const mainFont = "Zen Maru Gothic";
 				height: 100%;
 			}
 		
-			li.link_btn a {
+			ul li.link_btn_wrap a.link_btn {
 				background-color: var(--accentColor700);
 				color: #fff;
+			}
+
+			ul li .pr.bigo {
+				border-color: var(--accentColor700);
 			}
 		</style>
 		<title>{userName}</title>
@@ -52,9 +56,14 @@ const mainFont = "Zen Maru Gothic";
 				<dd>少女漫画　犬🐶　ドラゴンボール</dd>
 			</dl>
 			<ul>
-				<li class="link_btn"><a href="https://www.bigo.tv/user/mai5307" target="_blank">BIGO LIVE</a></li>
-				<li class="link_btn"><a href="https://www.tiktok.com/@myai_chan" target="_blank">TikTok</a></li>
-				<li class="link_btn"><a href="https://www.instagram.com/inu_maimai/" target="_blank">Instagram</a></li>
+				<li class="link_btn_wrap">
+					<div class="pr bigo">
+						過去に配布したアイコンを公開中！！<br><a href="/gallery/">アイコンを見にいく→</a>
+					</div>
+					<a class="link_btn" href="https://www.bigo.tv/user/mai5307" target="_blank">BIGO LIVE</a>
+				</li>
+				<li class="link_btn_wrap"><a class="link_btn" href="https://www.tiktok.com/@myai_chan" target="_blank">TikTok</a></li>
+				<li class="link_btn_wrap"><a class="link_btn" href="https://www.instagram.com/inu_maimai/" target="_blank">Instagram</a></li>
 			</ul>
 			<Footer />
 		</div>
