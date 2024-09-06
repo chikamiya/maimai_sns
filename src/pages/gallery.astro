@@ -1,8 +1,6 @@
 ---
-const userName = "まいまい🐶🤍";
-const metaDes = userName + "のSNSまとめページ"
-
-import Footer from "../pages/footer.astro"
+import { userName } from '../components/const_userName.js';
+import Footer from "../pages/footer.astro";
 import galleryImg0Src from '../assets/comingSoon_img.webp';
 import galleryImg1Src from '../assets/galleryImg001.jpg';
 import galleryImg2Src from '../assets/galleryImg002.jpg';
@@ -10,6 +8,8 @@ import galleryImg3Src from '../assets/galleryImg003.jpg';
 import galleryImg4Src from '../assets/galleryImg004.jpg';
 import galleryImg5Src from '../assets/galleryImg005.jpg';
 import galleryImg6Src from '../assets/galleryImg006.jpg';
+
+const metaDes = userName + "のSNSまとめページ";
 
 const galleryImg0 = await getImage({src: galleryImg0Src, format: 'webp'});
 const galleryImg1 = await getImage({src: galleryImg1Src, format: 'webp'});
