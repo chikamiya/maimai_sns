@@ -116,7 +116,8 @@ ul li.link_btn_wrap a.link_btn {
   height: 56px;
 }
 
-ul li .pr {
+ul li .pr,
+ul li .event {
   border: 4px solid #ccc;
   border-radius: 12px;
   padding: 16px 8px;
