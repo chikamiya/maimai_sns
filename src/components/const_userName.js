@@ -1,1 +1,1 @@
-export const userName = "まいまい🐶🤍";
+export const userName = "まいまい🐶💛";
